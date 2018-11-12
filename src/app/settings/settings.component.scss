@@ -1,0 +1,22 @@
+.main-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.search-container {
+    // margin: 10px 0px;
+    display: grid;
+    grid-template-columns: auto 300px;
+    p {
+        margin: auto 0;
+        grid-column-start: 1
+    }
+    app-search {
+        margin: auto 0;
+        grid-column-start: 2
+    }
+}
+
+.view {
+    margin-top: 10px;
+}
