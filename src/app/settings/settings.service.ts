@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
-import { CategoryNode } from './category-node';
+import { ComponentItem } from './component-item';
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +15,11 @@ export class SettingsService {
   constructor(private http: HttpClient) { }
 
   /** GET setting categores from the server */
-  getSettingCategories(): Observable<CategoryNode[]> {
-    return this.http.get<CategoryNode[]>(this.settingsUrl)
+  getComponentCategories(): Observable<ComponentItem[]> {
+    return this.http.get<ComponentItem[]>(this.settingsUrl)
       .pipe(
         tap(_ => console.log('Fetched categories')),
-        catchError(this.handleError('getSettingCategories', []))
+        catchError(this.handleError('getComponentCategories', []))
       );
   }
 

@@ -1,11 +1,8 @@
-<div>{{nodes | json}}</div>
-<div>
-    <div *ngFor="let category of nodes">
-        {{ category.name }}
-        <div *ngFor="let component of category.components">
-            --- {{ component.name }}
-            <div *ngFor="let component of component.components">--- ---{{ component.name }}</div>
-            <div *ngFor="let setting of component.settings">--- --- ---{{ setting.name }}</div>
-        </div>
+<div *ngFor="let category of categories">
+    <h3>{{ category.name }}</h3>
+    <div *ngFor="let component of category.components">
+        --- {{ component.name }}
+        <div *ngFor="let component of component.components">--- ---{{ component.name }}</div>
+        <div *ngFor="let setting of component.settings">--- --- ---{{ setting.name }}</div>
     </div>
 </div>

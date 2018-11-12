@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryNode } from '../category-node';
 import { SettingsService } from '../settings.service';
+import { ComponentCategory } from '../component-category';
 
 @Component({
   selector: 'app-view',
@@ -8,7 +8,7 @@ import { SettingsService } from '../settings.service';
   styleUrls: ['./view.component.scss']
 })
 export class ViewComponent implements OnInit {
-  nodes: CategoryNode[];
+  categories: ComponentCategory[];
 
   constructor(private settingsService: SettingsService) {
   }
@@ -18,8 +18,8 @@ export class ViewComponent implements OnInit {
   }
 
   private loadSettings() {
-    this.settingsService.getSettingCategories()
-      .subscribe(categories => this.nodes = categories);
+    this.settingsService.getComponentCategories()
+      .subscribe(categories => this.categories = categories);
   }
 
 }
