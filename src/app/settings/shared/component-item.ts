@@ -1,4 +1,4 @@
-import { NumberSetting, StringString, LookupSetting } from '../component-settings/component-setting';
+import { NumberSetting, StringString, LookupSetting } from './component-setting';
 
 export class ComponentItem {
     id: string;
