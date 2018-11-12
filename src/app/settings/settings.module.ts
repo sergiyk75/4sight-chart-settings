@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule, MatCheckboxModule, MatTreeModule, MatInputModule, MatFormFieldModule } from '@angular/material';
 import { SettingsComponent } from './settings.component';
 import { SearchComponent } from './search/search.component';
-import { ViewComponent } from './view/view.component';
-import { SettingsService } from './settings.service';
+import { ViewComponent } from './components-view/components-view.component';
 import { ComponentSettingsComponent } from './component-settings/component-settings.component';
 
 @NgModule({

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { SettingsService } from '../settings.service';
-import { ComponentCategory } from '../component-category';
+import { ComponentCategory } from './component-category';
 
 @Component({
   selector: 'app-view',
-  templateUrl: './view.component.html',
-  styleUrls: ['./view.component.scss']
+  templateUrl: './components-view.component.html',
+  styleUrls: ['./components-view.component.scss']
 })
 export class ViewComponent implements OnInit {
   categories: ComponentCategory[];
