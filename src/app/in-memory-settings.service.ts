@@ -5,10 +5,9 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
   providedIn: 'root'
 })
 export class InMemorySettingsService implements InMemoryDbService {
-  createDb() 
-  { 
-    let settings = [
-       { 
+  createDb() {
+    const categories = [
+       {
          id: 'components',
          name: '4Sight Components',
          components: [
@@ -16,29 +15,36 @@ export class InMemorySettingsService implements InMemoryDbService {
             name: '4Sight DSE',
             settings: [
               {
-                name: 'String Setting',
+                name: 'String Setting 1',
                 type: 'string',
                 value: 'abc',
                 regex: ''
               },
               {
-                name: 'Lookup Setting',
+                name: 'Lookup Setting 1',
                 type: 'lookup',
                 value: 'one',
-                values: ['one','two','three']
+                lookupValues: ['one', 'two', 'three']
               },
               {
-                name: 'Number Setting',
+                name: 'Number Setting 2',
                 type: 'number',
                 min: 1,
                 max: 10
               }
-  
+
             ],
             components: [
               {
                 name: 'DSE',
-                settings: []
+                settings: [
+                  {
+                    name: 'String Setting 2',
+                    type: 'string',
+                    value: 'blah',
+                    regex: ''
+                  },
+                ]
               },
               {
                 name: 'DSE Monitor',
@@ -82,6 +88,6 @@ export class InMemorySettingsService implements InMemoryDbService {
       }
     ];
 
-    return { settings }
+    return { categories };
   }
 }

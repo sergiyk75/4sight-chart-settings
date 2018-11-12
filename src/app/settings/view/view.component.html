@@ -1,3 +1,11 @@
-<p>
-  view works!
-</p>
+<div>{{nodes | json}}</div>
+<div>
+    <div *ngFor="let category of nodes">
+        {{ category.name }}
+        <div *ngFor="let component of category.components">
+            --- {{ component.name }}
+            <div *ngFor="let component of component.components">--- ---{{ component.name }}</div>
+            <div *ngFor="let setting of component.settings">--- --- ---{{ setting.name }}</div>
+        </div>
+    </div>
+</div>
