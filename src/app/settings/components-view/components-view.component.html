@@ -1,6 +1,6 @@
 <div *ngFor="let category of categories">
     <h3>{{ category.name }}</h3>
-    <app-components-tree [category]="category"></app-components-tree>
+    <app-components-tree [items]="category.components"></app-components-tree>
 </div>
 
 
