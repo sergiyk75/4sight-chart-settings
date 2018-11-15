@@ -5,17 +5,9 @@
 }
 
 .search-container {
-    // margin: 10px 0px;
+    margin: 10px 0px;
     display: grid;
     grid-template-columns: auto 300px;
-    .title {
-        margin: auto 0;
-        grid-column-start: 1
-    }
-    .input {
-        margin: auto 0;
-        grid-column-start: 2
-    }
 }
 
 .view {
