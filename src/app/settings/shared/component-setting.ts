@@ -13,6 +13,6 @@ export class LookupSetting extends BaseSetting<string> {
     values: string[];
 }
 
-export class StringString extends BaseSetting<string> {
+export class StringSetting extends BaseSetting<string> {
     regex: string;
 }
