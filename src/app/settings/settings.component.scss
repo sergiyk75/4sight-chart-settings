@@ -1,0 +1,15 @@
+.main-container {
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+.search-container {
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: auto 300px;
+}
+
+.view {
+    margin-top: 10px;
+}
